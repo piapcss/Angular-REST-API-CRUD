@@ -1,0 +1,17 @@
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+span {
+  color: red;
+}
+
+.card-form {
+  margin-top: 4rem;
+  background-color: white;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+

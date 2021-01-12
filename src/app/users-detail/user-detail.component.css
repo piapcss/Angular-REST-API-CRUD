@@ -1,0 +1,27 @@
+.card-detail {
+  background-color: white;
+  padding: 4rem 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 4rem;
+}
+
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+

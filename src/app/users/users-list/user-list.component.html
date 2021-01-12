@@ -1,0 +1,39 @@
+<app-form (newUserEvent)="addUser($event)" (updateUserEvent)="updateUser()" (buttonUpdated)="buttonUpdated()"
+  [user]="selectedUser" [buttonClass]="buttonClass">
+</app-form>
+
+<div class="container">
+  <div class="card-table">
+    <h4><b> <span class="glyphicon glyphicon-th-list"></span> User Listings</b></h4>
+    <hr>
+
+    <div *ngIf="deleteMessageAlert" class="alert alert-success" role="alert">
+      User Deleted Successfully!
+    </div>
+
+    <table class="table table-hover">
+      <thead style="background-color: black; color: white">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email Address</th>
+          <th scope="col">Contact No.</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of listOfUsers; let u = index">
+          <th scope="row"> {{ user?.id }}</th>
+          <td> {{ user?.name }}</td>
+          <td> {{ user?.email }} </td>
+          <td> {{ user?.contact }} </td>
+          <td class="btn-toolbar">
+            <button class="btn btn-info btn-sm" type="button" (click)="onView(user.id)">View</button>
+            <button class="btn btn-warning btn-sm" type="button" (click)="onUpdate(user.id)">Update</button>
+            <button class="btn btn-danger btn-sm" type="button" (click)="onDelete(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
